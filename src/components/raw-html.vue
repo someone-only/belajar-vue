@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const rawHtml: string = `<span style="color: red">text ini seharusny berwarna merah</span>`;
+const rawHtml: string = `<span style="color: red">text ini seharusnya berwarna merah</span>`;
 </script>
 
 <template>
