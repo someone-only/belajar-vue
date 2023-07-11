@@ -2,6 +2,7 @@
 import textInterpolar from "./components/text-interpolar.vue";
 import rawHtml from "./components/raw-html.vue"
 import attributeBinding from "./components/attribute-binding.vue"
+import jsExpression from "./components/js-expression.vue"
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import attributeBinding from "./components/attribute-binding.vue"
     <textInterpolar />
     <rawHtml />
     <attributeBinding />
+    <jsExpression />
   </div>
 </template>
 
