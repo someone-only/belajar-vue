@@ -1,19 +1,27 @@
 <script setup lang="ts">
-import textInterpolation from "./components/essentials/template-syntax/text-interpolation.vue";
-import rawHtml from "./components/essentials/template-syntax/raw-html.vue";
-import attributeBinding from "./components/essentials/template-syntax/attribute-binding.vue";
-import jsExpression from "./components/essentials/template-syntax/js-expression.vue";
-import directive from "./components/essentials/template-syntax/directive.vue";
+import { reactive, ref } from "vue";
+import vueMasteryExample from "./components/example/vue-mastery-example.vue";
+const cart = reactive([]);
+const premium = ref(true)
+function addToCart(id) {
+  cart.push(id)
+}
 </script>
 
 <template>
-  <div>
-    <h1>App Component</h1>
-    <textInterpolation />
-    <rawHtml />
-    <attributeBinding />
-    <jsExpression />
-    <directive />
+  <nav class="nav sticky-top navbar bg-body-tertiary bg-primary">
+    <div class="container-fluid d-flex justify-content-between">
+      <span class="navbar-brand mb-0 h1">Navbar</span>
+      <li class="nav-item border border-primary">
+        <a class="nav-link" href="#">Cart({{ cart.length }})</a>
+      </li>
+    </div>
+  </nav>
+
+  <div class="container d-flex flex-wrap justify-content-center align-items-center">
+    <vueMasteryExample :premium="premium" @add-to-cart="addToCart"/>
+    <vueMasteryExample :premium="premium" @add-to-cart="addToCart"/>
+    <vueMasteryExample :premium="premium" @add-to-cart="addToCart"/>
   </div>
 </template>
 
