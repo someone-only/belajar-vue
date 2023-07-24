@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, nextTick, shallowRef } from "vue";
+import { ref, reactive, nextTick } from "vue";
 
 // deklarasi reactive state dengan ref()
 const count = ref(0);
@@ -15,16 +15,14 @@ async function increment() {
 }
 
 // nilai ref() dapat berupa nested object dan array tapi akan menghasilkan reactive proxy
-// bisa menggunakan shallowref
-const obj = shallowRef({
+// untuk menggunakan tipe data array atau object lebih baik menggunakan reactive
+const obj = reactive({
   nested: { count: 1 },
   arr: [1, 2, 3, 4],
 });
 function change() {
-  obj.value = {
-    nested: { count: obj.value.nested.count + 1 },
-    arr: [...obj.value.arr, obj.value.arr.length + 1],
-  };
+obj.nested.count += 2
+obj.arr.push(obj.arr.length + 1)
 }
 </script>
 
