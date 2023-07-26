@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import basicExample from './components/essentials/computed-properties/basic-example.vue'; 
+        import classBindingVue from './components/essentials/class-style-binding/class-binding.vue';
 </script>
 
 <template>
-        <basicExample />
+        <classBindingVue />
 </template>
 
 <style scoped></style>
