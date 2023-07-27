@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import vForVue from "./components/essentials/list-rendering/v-for.vue";
+import eventListeningVue from "./components/essentials/event-handling/event-listening.vue";
 </script>
 
 <template>
-  <vForVue />
+  <eventListeningVue />
 </template>
 
 <style scoped></style>
