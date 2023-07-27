@@ -1,9 +1,9 @@
 <script setup lang="ts">
-        import classBindingVue from './components/essentials/class-style-binding/class-binding.vue';
+import vForVue from "./components/essentials/list-rendering/v-for.vue";
 </script>
 
 <template>
-        <classBindingVue />
+  <vForVue />
 </template>
 
 <style scoped></style>
