@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import eventListeningVue from "./components/essentials/event-handling/event-listening.vue";
+        import formInputVue from './components/essentials/form-input-binding/form-input.vue';
 </script>
 
 <template>
-  <eventListeningVue />
+        <formInputVue/>
 </template>
 
 <style scoped></style>
