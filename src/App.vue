@@ -1,9 +1,9 @@
 <script setup lang="ts">
-        import formInputVue from './components/essentials/form-input-binding/form-input.vue';
+        import lifecycle from './components/essentials/lifecycle-hooks/lifecycle.vue';
 </script>
 
 <template>
-        <formInputVue/>
+        <lifecycle/>
 </template>
 
 <style scoped></style>
