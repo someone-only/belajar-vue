@@ -1,9 +1,9 @@
 <script setup lang="ts">
-        import lifecycle from './components/essentials/lifecycle-hooks/lifecycle.vue';
+import watcher from "./components/essentials/watchers/watcher.vue";
 </script>
 
 <template>
-        <lifecycle/>
+  <watcher />
 </template>
 
 <style scoped></style>
