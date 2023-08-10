@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import watcher from "./components/essentials/watchers/watcher.vue";
+import refs from "./components/essentials/template-refs/refs.vue";
 </script>
 
 <template>
-  <watcher />
+  <refs />
 </template>
 
 <style scoped></style>
