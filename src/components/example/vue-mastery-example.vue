@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import { computed, reactive, ref } from "vue";
-import reviewForm from "./reviewForm.vue"
+import reviewForm from "./reviewForm.vue";
 import reviewList from "./reviewList.vue";
-import reviewListVue from "./reviewList.vue";
-const premium = defineProps(["premium"])
-defineEmits(["add-to-cart"])
+const premium = defineProps(["premium"]);
+defineEmits(["add-to-cart"]);
 const product = ref("Sepatu");
 const selectedModel = ref(0);
-const reviews = reactive([])
+const reviews = reactive([]);
 const details = reactive([
   "Merk: Kol",
   "Model: grey air",
@@ -38,8 +37,8 @@ const models = reactive([
 function updateModel(index) {
   selectedModel.value = index;
 }
-function addReview(review){
-reviews.push(review)
+function addReview(review) {
+  reviews.push(review);
 }
 const image = computed(() => {
   return models[selectedModel.value].image;
@@ -51,12 +50,12 @@ const title = computed(() => {
   return product.value + " " + models[selectedModel.value].brand;
 });
 const shipping = computed(() => {
-  if(premium){
-    return "free"
-  } else{
-    return "Rp. 15.000"
+  if (premium) {
+    return "free";
+  } else {
+    return "Rp. 15.000";
   }
-})
+});
 </script>
 
 <template>
@@ -81,10 +80,15 @@ const shipping = computed(() => {
             :style="{ backgroundColor: model.color }"
           ></div>
         </div>
-        <button class="btn btn-primary" @click='$emit("add-to-cart", models[selectedModel].id)'>add to cart</button>
+        <button
+          class="btn btn-primary"
+          @click="$emit('add-to-cart', models[selectedModel].id)"
+        >
+          add to cart
+        </button>
       </div>
     </div>
-    <reviewList class="my-3" v-if="reviews.length" :reviews="reviews"/>
+    <reviewList class="my-3" v-if="reviews.length" :reviews="reviews" />
     <reviewForm class="mt-3" @review-submit="addReview" />
   </div>
 </template>

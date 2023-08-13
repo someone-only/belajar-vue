@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import refs from "./components/essentials/template-refs/refs.vue";
+import app from "./components/essentials/components-basics/app.vue";
 </script>
 
 <template>
-  <refs />
+  <app />
 </template>
 
 <style scoped></style>
